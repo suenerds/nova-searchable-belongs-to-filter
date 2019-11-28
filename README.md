@@ -1,5 +1,5 @@
 # nova-searchable-belongs-to-filter
-A searchable Nova filter for belongsTo relationships.
+Searchable Nova filter for belongsTo relationships.
 
 ### Demo
 
@@ -11,8 +11,7 @@ This package assumes you have a text-search setup for your Eloquent models. See 
 
 ### Installation
 
-todo:
-- [ ] add to packagist
+`composer require suenerds/nova-searchable-belongs-to-filter`
 
 ### Usage
 

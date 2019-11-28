@@ -1,6 +1,6 @@
 {
     "name": "suenerds/nova-searchable-belongs-to-filter",
-    "description": "Searchable Filter for Laravel Nova",
+    "description": "Searchable Nova filter for belongsTo relationships.",
     "keywords": [
         "laravel",
         "nova"

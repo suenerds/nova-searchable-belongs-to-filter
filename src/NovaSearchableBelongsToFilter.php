@@ -42,7 +42,7 @@ class NovaSearchableBelongsToFilter extends Filter
 
     public function name()
     {
-        return __('Filter by ' . $this->meta()['fieldAttribute']);
+        return __('Filter by ' . $this->getFieldAttribute());
     }
 
     public function fieldAttribute($attribute)
@@ -59,5 +59,15 @@ class NovaSearchableBelongsToFilter extends Filter
         $this->filterBy = $attribute;
 
         return $this;
+    }
+
+    public function getFieldAttribute()
+    {
+        return $this->meta()['fieldAttribute'];
+    }
+
+    public function key()
+    {
+        return get_class($this) . '\\' . ucfirst($this->getFieldAttribute());
     }
 }

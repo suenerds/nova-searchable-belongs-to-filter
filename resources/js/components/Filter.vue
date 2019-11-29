@@ -14,7 +14,6 @@
                 :clearable="false"
                 trackBy="value"
                 searchBy="display"
-                class="mb-3"
             >
                 <div
                     slot="default"

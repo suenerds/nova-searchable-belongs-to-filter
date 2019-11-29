@@ -3,7 +3,9 @@
     "description": "Searchable Nova filter for belongsTo relationships.",
     "keywords": [
         "laravel",
-        "nova"
+        "nova",
+	"filter",
+	"belongs-to"
     ],
     "license": "MIT",
     "require": {

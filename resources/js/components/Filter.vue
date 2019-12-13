@@ -8,8 +8,8 @@
             <search-input
                 @input="performSearch"
                 @clear="clearSelection"
-                @selected="selectResource"
-                :value="selectedResource"
+                @selected="handleChange"
+                :value="value"
                 :data="availableResources"
                 :clearable="false"
                 trackBy="value"
@@ -17,20 +17,20 @@
             >
                 <div
                     slot="default"
-                    v-if="selectedResource"
+                    v-if="value"
                     class="flex items-center"
                 >
                     <div
-                        v-if="selectedResource.avatar"
+                        v-if="value.avatar"
                         class="mr-3"
                     >
                         <img
-                            :src="selectedResource.avatar"
+                            :src="value.avatar"
                             class="w-8 h-8 rounded-full block"
                         />
                     </div>
 
-                    {{ selectedResource.display }}
+                    {{ value.display }}
                 </div>
 
                 <div
@@ -89,15 +89,10 @@ export default {
             });
         },
 
-        selectResource(resource) {
-            this.selectedResource = resource;
-            this.handleChange();
-        },
-
-        handleChange() {
+        handleChange(resource) {
             this.$store.commit(`${this.resourceName}/updateFilterState`, {
                 filterClass: this.filterKey,
-                value: this.selectedResource.value
+                value: resource
             });
 
             this.$emit("change");

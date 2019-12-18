@@ -24,9 +24,9 @@ class NovaSearchableBelongsToFilter extends Filter
      * @param  mixed  $value
      * @return \Illuminate\Database\Eloquent\Builder
      */
-    public function apply(Request $request, $query, $value)
+    public function apply(Request $request, $query, $selected)
     {
-        return $query->where($this->filterBy, $value);
+        return $query->where($this->filterBy, $selected['value']);
     }
 
     /**

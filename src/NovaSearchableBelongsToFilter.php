@@ -16,6 +16,11 @@ class NovaSearchableBelongsToFilter extends Filter
 
     public $filterBy;
 
+    public function __construct($name = '')
+    {
+       $this->name = $name;
+    }
+
     /**
      * Apply the filter to the given query.
      *
@@ -42,7 +47,7 @@ class NovaSearchableBelongsToFilter extends Filter
 
     public function name()
     {
-        return __('Filter by ' . $this->getFieldAttribute());
+        return __($this->name ?: $this->getFieldAttribute());
     }
 
     public function fieldAttribute($attribute)

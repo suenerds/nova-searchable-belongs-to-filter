@@ -22,6 +22,9 @@ By default the filter will display the name of the `fieldAttribute` you passed o
 
 ```php
 // app/Nova/User.php
+
+use Suenerds\NovaSearchableBelongsToFilter\NovaSearchableBelongsToFilter
+
 public function filters(Request $request)
 {
     return [

@@ -11,6 +11,6 @@ Nova.booting((Vue, router) => {
 Nova.booting((Vue) => {
   Nova.inertia(
     "NovaSearchableBelongsToFilter",
-    require("./component/Filter").default
+    require("./components/Filter").default
   );
 });

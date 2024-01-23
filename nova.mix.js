@@ -4,7 +4,7 @@ const path = require("path");
 
 class NovaExtension {
   name() {
-    return "suenerds/nova-searchable-belongs-to-filter";
+    return "nova-extension";
   }
 
   register(name) {

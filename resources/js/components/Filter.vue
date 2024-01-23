@@ -1,41 +1,37 @@
 <template>
-  <div>
-    <h3 class="text-sm uppercase tracking-wide text-80 bg-30 p-3">
-      {{ filter.name }}
-    </h3>
+  <h3 class="pt-2 px-3 text-xs uppercase font-bold tracking-wide">
+    {{ filter.name }}
+  </h3>
 
-    <div class="p-2">
-      <search-input
-        @input="performSearch"
-        @clear="clearSelection"
-        @selected="handleChange"
-        :value="value"
-        :data="availableResources"
-        :clearable="false"
-        trackBy="value"
-        searchBy="display"
-      >
-        <div slot="default" v-if="value" class="flex items-center">
-          <div v-if="value.avatar" class="mr-3">
-            <img :src="value.avatar" class="w-8 h-8 rounded-full block" />
-          </div>
-
-          {{ value.display }}
+  <div class="p-2">
+    <SearchInput
+      @input="performSearch"
+      @clear="clearSelection"
+      @selected="handleChange"
+      :value="value"
+      :data="availableResources"
+      :clearable="false"
+      trackBy="value"
+      searchBy="display"
+    >
+      <div v-if="value" class="flex items-center">
+        <div v-if="value.avatar" class="mr-3">
+          <img :src="value.avatar" class="w-8 h-8 rounded-full block" />
         </div>
 
-        <div
-          slot="option"
-          slot-scope="{ option, selected }"
-          class="flex items-center"
-        >
+        {{ value.display }}
+      </div>
+
+      <template #option="{ selected, option }">
+        <div class="flex items-center">
           <div v-if="option.avatar" class="mr-3">
             <img :src="option.avatar" class="w-8 h-8 rounded-full block" />
           </div>
 
           {{ option.display }}
         </div>
-      </search-input>
-    </div>
+      </template>
+    </SearchInput>
   </div>
 </template>
 

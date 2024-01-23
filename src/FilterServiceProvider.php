@@ -19,13 +19,6 @@ class FilterServiceProvider extends ServiceProvider
             Nova::script('nova-searchable-belongs-to-filter', __DIR__.'/../dist/js/filter.js');
             Nova::style('nova-searchable-belongs-to-filter', __DIR__.'/../dist/css/filter.css');
         });
-
-        Nova::router()
-            ->group(function ($router) {
-                $router->get('nova-searchable-belongs-to-filter', function (Request $request) {
-                    return inertia('NovaSearchableBelongsToFilter');
-                });
-            });
     }
 
     /**

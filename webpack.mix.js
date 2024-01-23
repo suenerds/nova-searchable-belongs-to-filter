@@ -6,5 +6,4 @@ mix
   .setPublicPath("dist")
   .js("resources/js/filter.js", "js")
   .vue({ version: 3 })
-  .css("resources/css/filter.css", "css")
   .nova("suenerds/nova-searchable-belongs-to-filter");

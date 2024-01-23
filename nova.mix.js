@@ -22,6 +22,10 @@ class NovaExtension {
         __dirname,
         "vendor/laravel/nova/resources/js/mixins/packages.js"
       ),
+      "performs-searches": path.join(
+        __dirname,
+        "vendor/laravel/nova/resources/js/mixins/PerformsSearches.js"
+      ),
     };
 
     webpackConfig.output = {

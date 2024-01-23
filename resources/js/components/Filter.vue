@@ -40,7 +40,7 @@
 </template>
 
 <script>
-import PerformsSearches from "../../../vendor/laravel/nova/resources/js/mixins/PerformsSearches";
+import PerformsSearches from "performs-searches";
 import storage from "../storage/BelongsToFieldStorage";
 
 export default {

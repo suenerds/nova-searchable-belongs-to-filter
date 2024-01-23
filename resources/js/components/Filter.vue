@@ -1,37 +1,39 @@
 <template>
-  <h3 class="pt-2 px-3 text-xs uppercase font-bold tracking-wide">
-    {{ filter.name }}
-  </h3>
+  <div class="pt-2 pb-3">
+    <h3 class="px-3 text-xs uppercase font-bold tracking-wide">
+      {{ filter.name }}
+    </h3>
 
-  <div class="p-2">
-    <SearchInput
-      @input="performSearch"
-      @clear="clearSelection"
-      @selected="handleChange"
-      :value="value"
-      :data="availableResources"
-      :clearable="false"
-      trackBy="value"
-      searchBy="display"
-    >
-      <div v-if="value" class="flex items-center">
-        <div v-if="value.avatar" class="mr-3">
-          <img :src="value.avatar" class="w-8 h-8 rounded-full block" />
-        </div>
-
-        {{ value.display }}
-      </div>
-
-      <template #option="{ selected, option }">
-        <div class="flex items-center">
-          <div v-if="option.avatar" class="mr-3">
-            <img :src="option.avatar" class="w-8 h-8 rounded-full block" />
+    <div class="mt-1 px-3">
+      <SearchInput
+        @input="performSearch"
+        @clear="clearSelection"
+        @selected="handleChange"
+        :value="value"
+        :data="availableResources"
+        :clearable="false"
+        trackBy="value"
+        searchBy="display"
+      >
+        <div v-if="value" class="flex items-center">
+          <div v-if="value.avatar" class="mr-3">
+            <img :src="value.avatar" class="w-8 h-8 rounded-full block" />
           </div>
 
-          {{ option.display }}
+          {{ value.display }}
         </div>
-      </template>
-    </SearchInput>
+
+        <template #option="{ selected, option }">
+          <div class="flex items-center">
+            <div v-if="option.avatar" class="mr-3">
+              <img :src="option.avatar" class="w-8 h-8 rounded-full block" />
+            </div>
+
+            {{ option.display }}
+          </div>
+        </template>
+      </SearchInput>
+    </div>
   </div>
 </template>
 

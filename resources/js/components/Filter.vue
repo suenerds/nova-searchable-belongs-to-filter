@@ -7,11 +7,11 @@
         <div class="p-2">
             <search-input
                 @input="performSearch"
-                @clear="clearSelection"
+                @clear="handleChange"
                 @selected="handleChange"
                 :value="value"
                 :data="availableResources"
-                :clearable="false"
+                :clearable="true"
                 trackBy="value"
                 searchBy="display"
             >

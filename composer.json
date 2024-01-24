@@ -1,31 +1,33 @@
 {
-    "name": "suenerds/nova-searchable-belongs-to-filter",
-    "description": "Searchable Nova filter for belongsTo relationships.",
-    "keywords": [
-        "laravel",
-        "nova",
-	"filter",
-	"belongs-to"
-    ],
-    "license": "MIT",
-    "require": {
-        "php": ">=7.1.0"
-    },
-    "autoload": {
-        "psr-4": {
-            "Suenerds\\NovaSearchableBelongsToFilter\\": "src/"
-        }
-    },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "Suenerds\\NovaSearchableBelongsToFilter\\FilterServiceProvider"
-            ]
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+  "name": "suenerds/nova-searchable-belongs-to-filter",
+  "description": "Searchable Nova filter for belongsTo relationships.",
+  "keywords": [
+    "laravel",
+    "nova",
+    "filter",
+    "belongs-to"
+  ],
+  "license": "MIT",
+  "require": {
+    "php": ">=8.0",
+    "laravel/framework": "^9.0",
+    "laravel/nova": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Suenerds\\NovaSearchableBelongsToFilter\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Suenerds\\NovaSearchableBelongsToFilter\\FilterServiceProvider"
+      ]
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

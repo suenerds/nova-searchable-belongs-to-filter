@@ -1,6 +1,17 @@
 # nova-searchable-belongs-to-filter
 Searchable Nova filter for belongsTo relationships.
 
+### ⚠️⚠️⚠️ Attention ⚠️⚠️⚠️
+
+This package is not needed with Nova 4, you can achieve the same behaviour with:
+
+```php
+BelongsTo::make('User')
+    ->searchable()
+    ->filterable(),
+```
+---
+
 ### Demo
 
 ![demo](https://user-images.githubusercontent.com/4764281/69803436-76184200-11dc-11ea-9c19-4eacf1ba3b4c.gif)

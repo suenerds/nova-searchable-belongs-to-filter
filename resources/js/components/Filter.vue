@@ -7,11 +7,11 @@
     <div class="mt-1 px-3">
       <SearchInput
         @input="performSearch"
-        @clear="clearSelection"
+        @clear="handleChange"
         @selected="handleChange"
         :value="value"
         :data="availableResources"
-        :clearable="false"
+        :clearable="true"
         trackBy="value"
         searchBy="display"
       >

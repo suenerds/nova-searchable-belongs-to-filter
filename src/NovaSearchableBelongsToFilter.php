@@ -31,6 +31,10 @@ class NovaSearchableBelongsToFilter extends Filter
      */
     public function apply(Request $request, $query, $selected)
     {
+        if($this->filterBy instanceof \Closure) {
+            return ($this->filterBy)($query, $selected['value']);
+        }
+
         return $query->where($this->filterBy, $selected['value']);
     }
 
